@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Footer Design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+<body>
+  
+  <h1>Welcome  </h1>
+
+  <div class="articlelist">
+    
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call="${clientlib.all @ categories='trainingsite.footer'}" />
+
+
+    <sly data-sly-use.model="com.trainingsite.core.models.FooterModel">
+
+        <sly data-sly-list.articleList="${model.articleListDataBeanList}">
+
+          <!-- Site footer -->
+          <footer class="mainfooter" role="contentinfo">
+            <div class="footer-middle">
+            <div class="container">
+              <div class="row">
+          
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Heading 1</h4>
+              <ul class="list-unstyled">
+
+                    <h4> <li><a href="http://localhost:4502/editor.html/content/trainingsite/us/en/Page1.html">${articleList.title}</a> </li></h4>
+
+                    <h4><li><a href="#">${articleList.path}</a>  </li></h4>
+
+                    <h4><li> <a> ${articleList.description}</a>  </li></h4>
+                    </ul>
+                  </div>
+                  </div>
+             
+                  <div class="col-md-3 col-sm-6">
+                    <!--Column1-->
+                    <div class="footer-pad">
+                      <h4>Heading 2</h4>
+                      <ul class="list-unstyled">
+                        <li><a href="https://www.w3schools.com/howto/howto_website.asp">Website Tutorial</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Accessibility">Accessibility</a></li>
+                        <li><a href="https://www.merriam-webster.com/dictionary/disclaimer">Disclaimer</a></li>
+                        <li><a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a></li>
+                        <li><a href="https://herothemes.com/blog/what-is-a-frequently-asked-questions-page/#:~:text=FAQ%20stands%20for%20Frequently%20Asked,having%20to%20contact%20customer%20support.">FAQs</a></li>
+                        <li><a href="#">Webmaster</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            
+                  </div>
+                  </div>
+                  </div>
+                  </footer>
+               
+</sly>
+
+  </sly>
+</div>
+
+
+</body>
+</html>

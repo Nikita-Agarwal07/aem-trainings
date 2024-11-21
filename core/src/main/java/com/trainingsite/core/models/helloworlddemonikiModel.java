@@ -24,7 +24,6 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
@@ -34,7 +33,7 @@ import com.day.cq.wcm.api.PageManager;
 import java.util.Optional;
 
 @Model(adaptables = Resource.class)
-public class HelloWorldModel {
+public class helloworlddemonikiModel {
 
     @ValueMapValue(name=PROPERTY_RESOURCE_TYPE, injectionStrategy=InjectionStrategy.OPTIONAL)
     @Default(values="No resourceType")
@@ -49,19 +48,14 @@ public class HelloWorldModel {
 
     @PostConstruct
     protected void init() {
-        User us= new User();
-        us.setName("Nikita Singh");
-        us.setAddress("panvel");
-
-
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
         String currentPagePath = Optional.ofNullable(pageManager)
                 .map(pm -> pm.getContainingPage(currentResource))
                 .map(Page::getPath).orElse("");
 
-        message = "Hello World Nikita!\n" + us.getName() + " / " +us.getAddress()
-            + "Resource type is Niki: " + resourceType + "\n"
-            + "Current page is:  " + currentPagePath + "\n";
+        message = "Hello World Nikita you tube channel!\n"
+                + "Resource type is Nikita Singh: " + resourceType + "\n"
+                + "Current page is Nikita Singh:  " + currentPagePath + "\n";
     }
 
     public String getMessage() {

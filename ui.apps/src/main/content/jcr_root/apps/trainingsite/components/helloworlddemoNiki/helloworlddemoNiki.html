@@ -1,0 +1,10 @@
+<h1>Welcome Nikita Singh</h1>
+<div class="cmp-helloworld" data-cmp-is="helloworld">
+    <h2 class="cmp-helloworld__title">Hello World Component</h2>
+        <p class="cmp-helloworld__item-label">Text property:</p>
+        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="property">${properties.description}</pre>
+    </div>
+<div class="cmp-helloworld__item" data-sly-use.model="com.trainingsite.core.models.helloworlddemonikiModel" data-sly-test="${model.description}">
+    <p class="cmp-helloworld__item-label">Model message:</p>
+    <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="model">${model.description}</pre>
+</div>
